@@ -1,9 +1,9 @@
-import Carousel from "./components/Carousel";
-import ExploreTopBooks from "./components/ExploreTopBooks";
-import Heros from "./components/Hero";
-import LibraryServices from "./components/LibraryServices";
+import {Carousel} from "./components/Carousel";
+import {ExploreTopBooks} from "./components/ExploreTopBooks";
+import {Heros} from "./components/Hero";
+import {LibraryServices} from "./components/LibraryServices";
 
-export default function HomePage() {
+export const  HomePage=()=> {
    return (
       <>
          <ExploreTopBooks />

@@ -1,4 +1,4 @@
-export default function LibraryServices() {
+export const LibraryServices = () => {
    return (
       <div className="container my-5">
          <div className="row p-4 align-items-center border shadow-lg">
@@ -17,4 +17,4 @@ export default function LibraryServices() {
          </div>
       </div>
    );
-}
+};

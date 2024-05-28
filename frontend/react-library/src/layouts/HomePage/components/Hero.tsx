@@ -1,4 +1,4 @@
-export default function Heros() {
+export const Heros = () => {
    return (
       <div>
          <div className="d-none d-lg-block">
@@ -69,4 +69,4 @@ export default function Heros() {
          </div>
       </div>
    );
-}
+};

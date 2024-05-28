@@ -1,4 +1,4 @@
-export default function Navbar() {
+export const  Navbar=()=> {
    return (
       <nav className="navbar navbar-expand-lg navbar-dark main-color py-3">
          <div className="container-fluid">
@@ -30,7 +30,7 @@ export default function Navbar() {
                      </a>
                   </li>
                </ul>
-
+                
                <ul className="navbar-nav ms-auto">
                   <li className="nav-item m-1">
                      <a type="button" className="btn btn-outline-light" href="#">
