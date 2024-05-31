@@ -1,19 +1,36 @@
 import React from "react";
+import { Route, Switch, Redirect } from "react-router-dom";
 
 import "./App.css";
 
-import {Navbar} from "./layouts/NavbarAndFooter/Navbar";
-
-import {Footer} from "./layouts/NavbarAndFooter/Footer";
-import {HomePage} from "./layouts/HomePage/HomePage";
+import { Navbar } from "./layouts/NavbarAndFooter/Navbar";
+import { Footer } from "./layouts/NavbarAndFooter/Footer";
+import { HomePage } from "./layouts/HomePage/HomePage";
+import { SearchBooksPage } from "./layouts/SearchBooksPage/SearchBooksPage";
+import { BookCheckoutPage } from "./layouts/BookCheckoutPage/BookCheckoutPage";
 
 function App() {
    return (
-      <>
+      <div className="d-flex flex-column min-vh-100">
          <Navbar />
-          <HomePage/>
-         <Footer/>
-      </>
+         <div className="flex-grow-1">
+            <Switch>
+               <Route exact path="/">
+                  <Redirect to="/home" />
+               </Route>
+               <Route path="/home">
+                  <HomePage />
+               </Route>
+               <Route path="/search">
+                  <SearchBooksPage />
+               </Route>
+               <Route path="/checkout/:bookId">
+                  <BookCheckoutPage />
+               </Route>
+            </Switch>
+         </div>
+         <Footer />
+      </div>
    );
 }
 
